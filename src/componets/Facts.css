@@ -1,0 +1,110 @@
+/* Responsive styles for the Facts component */
+.facts-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.35));
+    color: #fff;
+    text-align: left;
+}
+
+.facts-overlay .display-1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0;
+    opacity: 0.12;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.facts-overlay h4 {
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+    z-index: 2;
+}
+
+.facts-overlay p {
+    margin: 0;
+    z-index: 2;
+}
+
+.position-relative .img-fluid {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.col-xl-3.col-sm-6 {
+    min-height: 280px;
+}
+
+.year-badge {
+    display: flex;
+    align-items: stretch;
+}
+
+.year-badge>.d-flex {
+    min-width: 0;
+}
+
+@media (max-width: 1200px) {
+    .facts-overlay .display-1 {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .facts-overlay {
+        padding: 1.0rem;
+    }
+
+    .facts-overlay .display-1 {
+        font-size: 2.2rem;
+        top: .5rem;
+        right: .5rem;
+        opacity: 0.14;
+    }
+
+    .col-xl-3.col-sm-6 {
+        min-height: 220px;
+    }
+
+    .position-relative .img-fluid {
+        height: 100%;
+    }
+
+    .year-badge {
+        width: 140px !important;
+        height: 140px !important;
+        transform: translate(8px, 8px);
+    }
+
+    .year-badge>.d-flex {
+        padding: .5rem;
+    }
+}
+
+/* Small tweak for very small screens */
+@media (max-width: 480px) {
+    .facts-overlay .display-1 {
+        font-size: 1.8rem;
+    }
+
+    .facts-overlay h4 {
+        font-size: 1rem;
+    }
+
+    .facts-overlay p {
+        font-size: .9rem;
+    }
+}
