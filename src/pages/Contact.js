@@ -17,7 +17,7 @@ function Contact(props) {
     if (localStorage.getItem("token")) {
       navigate("/contact");
     } else {
-      navigate("/login");
+      navigate("/");
     }
   }, [navigate]);
 

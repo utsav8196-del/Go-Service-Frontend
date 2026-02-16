@@ -33,7 +33,7 @@ function Workercart() {
     if (localStorage.getItem("token")) {
       navigate("/workercart");
     } else {
-      navigate("/login");
+      navigate("/");
     }
   }, [navigate]);
   // Function to remove an item from the cart

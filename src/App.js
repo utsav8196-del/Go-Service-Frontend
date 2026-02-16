@@ -1,6 +1,6 @@
 import { Route, Routes, useLocation } from "react-router-dom";
-import Login from "./componets/Login";
-import Registration from "./componets/Registration";
+// import Login from "./componets/Login";
+// import Registration from "./componets/Registration";
 import Navbar from "./componets/Navbar";
 import Footer from "./componets/Footer";
 import Home from "./componets/Home";
@@ -37,8 +37,8 @@ import WorkerHire from "./Admin/WorkerHire";
 function App() {
   const location = useLocation();
   const hideHeaderFooterRoutes = [
-    "/login",
-    "/signup",
+    // "/login",
+    // "/signup",
     "/WorkerRegister",
     "/editservice",
     "/Feedback",
@@ -87,8 +87,8 @@ function App() {
           <Route exact path="/contact" element={<Contact />} />
           <Route exact path="/Booking" element={<Booking />} />
           <Route exact path="/Submit" element={<Submit />} />
-          <Route exact path="/signup" element={<Registration />} />
-          <Route exact path="/login" element={<Login />} />
+          {/* <Route exact path="/signup" element={<Registration />} /> */}
+          {/* <Route exact path="/login" element={<Login />} /> */}
           <Route exact path="/Payment" element={<Payment />} />
           <Route exact path="/contacts" element={<Contacts />} />
           <Route exact path="/Admin/dashboard" element={<Admin />} />

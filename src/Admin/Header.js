@@ -5,7 +5,7 @@ function Header() {
   const handlelogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("userId");
-    navigate("/login");
+    navigate("/");
   };
   return (
     <>

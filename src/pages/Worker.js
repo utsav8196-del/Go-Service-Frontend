@@ -16,7 +16,7 @@ export default function Worker() {
     if (localStorage.getItem("token")) {
       navigate("/worker");
     } else {
-      navigate("/login");
+      navigate("/");
     }
   }, [navigate]);
   return (

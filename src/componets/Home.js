@@ -11,7 +11,7 @@ function Home() {
     if (localStorage.getItem("token")) {
       navigate("/");
     } else {
-      navigate("/login");
+      navigate("/");
     }
   }, [navigate]);
   return (

@@ -7,7 +7,7 @@ function About(props) {
     if (localStorage.getItem("token")) {
       navigate("/About");
     } else {
-      navigate("/login");
+      navigate("/");
     }
   }, [navigate]);
   return (
