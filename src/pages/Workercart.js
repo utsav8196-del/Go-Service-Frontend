@@ -35,7 +35,7 @@ function Workercart() {
     } else {
       navigate("/login");
     }
-  }, []);
+  }, [navigate]);
   // Function to remove an item from the cart
   const removeItem = async (index) => {
     try {
