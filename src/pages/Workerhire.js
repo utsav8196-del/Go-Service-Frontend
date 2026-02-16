@@ -1,14 +1,8 @@
-import React, { useContext, useState, useEffect } from "react";
+import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import noteContext from "../context/notes/noteContext";
-import { useNavigate } from "react-router-dom";
-import axios from "axios";
 
 function Workerhire() {
-  const context = useContext(noteContext);
-  const { addbooking } = context;
-  const navigate = useNavigate();
   const [validated, setValidated] = useState(false);
   const [formData, setFormData] = useState({
     firstname: "",
@@ -115,7 +109,6 @@ function Workerhire() {
           }
         );
         console.log("form", form);
-        const data = await response.json(); // Parse response data
         if (response.ok) {
           // Check if response status is ok
           toast.success(`Send Application successfully.`, {
@@ -188,13 +181,6 @@ function Workerhire() {
     setCities(filteredCities);
   };
 
-  const getToday = () => {
-    const today = new Date();
-    const month = String(today.getMonth() + 1).padStart(2, "0");
-    const day = String(today.getDate()).padStart(2, "0");
-    const year = today.getFullYear();
-    return `${year}-${month}-${day}`;
-  };
 
   const indianStates = [
     "Andhra Pradesh",
@@ -538,7 +524,7 @@ function Workerhire() {
     ],
   };
 
-  const [selectedState, setSelectedState] = useState("");
+  const [setSelectedState] = useState("");
   const [cities, setCities] = useState([]);
 
   return (

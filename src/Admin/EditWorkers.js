@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import Footer from "./Footer";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
 
 function EditWorkers() {
   const [workers, setWorkers] = useState([]);
-  const navigate = useNavigate();
 
   const [selectedWorker, setSelectedWorker] = useState({
     image: null,

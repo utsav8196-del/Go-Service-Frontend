@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import noteContext from "../context/notes/noteContext";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
@@ -19,7 +19,7 @@ function Contact(props) {
     } else {
       navigate("/login");
     }
-  }, []);
+  }, [navigate]);
 
   const handleclick = (e) => {
     e.preventDefault();

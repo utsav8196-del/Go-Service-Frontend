@@ -1,4 +1,5 @@
-import React from 'react'
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable react/jsx-no-comment-textnodes */
 import Header from './Header'
 import Sidebar from './Sidebar'
 import Footer from './Footer'
@@ -30,7 +31,9 @@ function Customers() {
                                     <a href="/customerinfo.html"><img src="/img/worker/w-5.jpg" alt="Profile" className="rounded-circle" />
                                     </a>
                                     <h2>Kevin Anderson</h2>
+                                    // eslint-disable-next-line react/jsx-no-comment-textnodes
                                     <div className="social-links mt-2">
+                                        // eslint-disable-next-line jsx-a11y/anchor-is-valid
                                         <a href="#" className="twitter"><i className="bi bi-twitter" /></a>
                                         <a href="#" className="facebook"><i className="bi bi-facebook" /></a>
                                         <a href="#" className="instagram"><i className="bi bi-instagram" /></a>

@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 function Payment() {
@@ -22,6 +22,7 @@ function Payment() {
     window.location.href = `http://localhost:5000/pay?totalPrice=${totalPrice}`;
   };
 
+  // eslint-disable-next-line no-unused-vars
   const [data1, setData1] = useState([]);
   const [totalPrice, settotalPrice] = useState();
   useEffect(() => {

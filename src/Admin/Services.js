@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import {useState } from "react";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import Footer from "./Footer";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 
 function Services() {
@@ -11,7 +11,6 @@ function Services() {
     information: "",
     image: null,
   });
-  const navigate = useNavigate();
 
   const handleclick = async (e) => {
     e.preventDefault();

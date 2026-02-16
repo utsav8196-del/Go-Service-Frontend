@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Facts from "./Facts";
 import Facility from "./Facility";
 import Team from "./Team";
@@ -13,7 +13,7 @@ function Home() {
     } else {
       navigate("/login");
     }
-  }, []);
+  }, [navigate]);
   return (
     <>
       <div

@@ -1,4 +1,3 @@
-import React from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Login from "./componets/Login";
 import Registration from "./componets/Registration";

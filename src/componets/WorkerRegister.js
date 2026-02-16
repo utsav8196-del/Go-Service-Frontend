@@ -2,55 +2,6 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 
 function WorkerRegister() {
-    // const [formData, setFormData] = useState({
-    //     username: '',
-    //     email: '',
-    //     password: '',
-    //     service: 'Home Cleaning', // Default service
-    // });
-    // const [errors, setErrors] = useState({});
-
-    // const handleChange = (e) => {
-    //     const { name, value } = e.target;
-    //     setFormData({ ...formData, [name]: value });
-    //     setErrors({ ...errors, [name]: '' }); // Clear the error when input changes
-    // };
-
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     const newErrors = validateForm(formData);
-    //     if (Object.keys(newErrors).length > 0) {
-    //         setErrors(newErrors);
-    //     } else {
-    //         // Form is valid, you can submit the data
-    //         console.log('Form submitted:', formData);
-    //         // You can call an API to submit the form data here
-    //     }
-    // };
-
-    // const validateForm = (data) => {
-    //     const errors = {};
-    //     if (!data.username.trim()) {
-    //         errors.username = 'Username is required';
-    //     }
-    //     if (!data.email.trim()) {
-    //         errors.email = 'Email is required';
-    //     } else if (!isValidEmail(data.email)) {
-    //         errors.email = 'Invalid email address';
-    //     }
-    //     if (!data.password.trim()) {
-    //         errors.password = 'Password is required';
-    //     }
-    //     return errors;
-    // };
-
-    // const isValidEmail = (email) => {
-    //     // Basic email validation regex
-    //     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    //     return regex.test(email);
-    // };
-
-
     const navigate = useNavigate();
     const [credential, setcredential] = useState({
         name: "",

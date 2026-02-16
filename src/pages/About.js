@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import  { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 function About(props) {
@@ -9,7 +9,7 @@ function About(props) {
     } else {
       navigate("/login");
     }
-  }, []);
+  }, [navigate]);
   return (
     <>
       <div
