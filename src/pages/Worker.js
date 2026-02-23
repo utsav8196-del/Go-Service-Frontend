@@ -7,7 +7,7 @@ export default function Worker() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/getworkers")
+      .get("https://go-services-ten.vercel.app/getworkers")
       .then((response) => setWorker(response.data))
       .catch((error) => console.log(error));
   }, []);

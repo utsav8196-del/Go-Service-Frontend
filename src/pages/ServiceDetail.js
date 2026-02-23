@@ -9,7 +9,7 @@ function ServiceDetail() {
   useEffect(() => {
     if (id) {
       axios
-        .get(`http://localhost:5000/getService/${id}`) // Replace with your backend endpoint to fetch service details by ID
+        .get(`https://go-services-ten.vercel.app/getService/${id}`) // Replace with your backend endpoint to fetch service details by ID
         .then((response) => setService(response?.data?.data))
         .catch((error) => console.log(error));
     }

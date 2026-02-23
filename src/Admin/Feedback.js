@@ -10,7 +10,7 @@ function Feedback() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/getFeedback")
+      .get("https://go-services-ten.vercel.app/getFeedback")
       .then((response) => setUsers(response.data))
       .catch((error) => console.log(error));
   }, []);
@@ -22,7 +22,7 @@ function Feedback() {
     );
     if (confirmDelete) {
       axios
-        .delete(`http://localhost:5000/delete/feedback/${id}`)
+        .delete(`https://go-services-ten.vercel.app/delete/feedback/${id}`)
         .then((response) => {
           window.location.reload();
         })

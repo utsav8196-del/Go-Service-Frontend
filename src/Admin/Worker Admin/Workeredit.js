@@ -10,7 +10,7 @@ function EditWorkers() {
     const [selectedWorker, setSelectedWorker] = useState(null);
 
     useEffect(() => {
-        axios.get("http://localhost:5000/getWorkers")
+        axios.get("https://go-services-ten.vercel.app/getWorkers")
             .then(response => {
                 console.log("Received data:", response.data);
                 setWorkers(response.data);
@@ -27,7 +27,7 @@ function EditWorkers() {
         );
         if (confirmDelete) {
             try {
-                await axios.delete(`http://localhost:5000/delete/deleteworker/${id}`);
+                await axios.delete(`https://go-services-ten.vercel.app/delete/deleteworker/${id}`);
                 setWorkers(workers.filter(worker => worker._id !== id));
             } catch (error) {
                 console.log("Error deleting worker:", error);
@@ -42,7 +42,7 @@ function EditWorkers() {
     const handleSaveChanges = async () => {
         try {
             await axios.put(
-                `http://localhost:5000/updateWorker/${selectedWorker._id}`,
+                `https://go-services-ten.vercel.app/updateWorker/${selectedWorker._id}`,
                 selectedWorker
             );
             const modalBackdrop = document.getElementById("staticBackdrop");

@@ -11,7 +11,7 @@ function Booking() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/getbooking")
+      .get("https://go-services-ten.vercel.app/getbooking")
       .then((response) => setUsers(response.data))
       .catch((error) => console.log(error));
   }, []);
@@ -23,7 +23,7 @@ function Booking() {
     );
     if (confirmDelete) {
       axios
-        .delete(`http://localhost:5000/delete/booking/${id}`)
+        .delete(`https://go-services-ten.vercel.app/delete/booking/${id}`)
         .then((response) => {
           window.location.reload();
         })

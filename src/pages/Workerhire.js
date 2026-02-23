@@ -99,7 +99,7 @@ function Workerhire() {
 
       try {
         const response = await fetch(
-          `http://localhost:5000/api/notes/addhires`,
+          `https://go-services-ten.vercel.app/api/notes/addhires`,
           {
             method: "POST",
             headers: {

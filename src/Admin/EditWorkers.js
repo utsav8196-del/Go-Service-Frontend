@@ -21,7 +21,7 @@ function EditWorkers() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/getWorkers")
+      .get("https://go-services-ten.vercel.app/getWorkers")
       .then((response) => {
         console.log("Received data:", response.data);
         setWorkers(response.data);
@@ -33,7 +33,7 @@ function EditWorkers() {
 
   const getdata = () => {
     axios
-      .get("http://localhost:5000/getWorkers")
+      .get("https://go-services-ten.vercel.app/getWorkers")
       .then((response) => setWorkers(response.data))
       .catch((error) => console.log(error));
   };
@@ -44,7 +44,7 @@ function EditWorkers() {
     );
     if (confirmDelete) {
       try {
-        await axios.delete(`http://localhost:5000/delete/deleteworker/${id}`);
+        await axios.delete(`https://go-services-ten.vercel.app/delete/deleteworker/${id}`);
         setWorkers(workers.filter((worker) => worker._id !== id));
       } catch (error) {
         console.log("Error deleting worker:", error);
@@ -79,7 +79,7 @@ function EditWorkers() {
       formData.append("experince", experince);
 
       await fetch(
-        `http://localhost:5000/api/notes/updateworker/${selectedWorker._id}`,
+        `https://go-services-ten.vercel.app/api/notes/updateworker/${selectedWorker._id}`,
         {
           method: "PUT", // Change the method to PUT
           headers: {

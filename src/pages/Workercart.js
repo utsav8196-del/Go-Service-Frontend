@@ -17,7 +17,7 @@ function Workercart() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.post("http://localhost:5000/getcart", {
+        const response = await axios.post("https://go-services-ten.vercel.app/getcart", {
           userId: localStorage.getItem("userId"),
         });
         setData(response.data.data.cart);
@@ -40,7 +40,7 @@ function Workercart() {
   const removeItem = async (index) => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/remove-from-cart",
+        "https://go-services-ten.vercel.app/remove-from-cart",
         {
           userId: localStorage.getItem("userId"),
           workerId: data[index]._id,

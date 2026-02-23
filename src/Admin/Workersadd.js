@@ -49,7 +49,7 @@ function Workersadd() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/notes/addworker`,
+        `https://go-services-ten.vercel.app/api/notes/addworker`,
         {
           method: "POST",
           headers: {
@@ -104,7 +104,7 @@ function Workersadd() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/getServices")
+      .get("https://go-services-ten.vercel.app/getServices")
       .then((response) => setServicesData(response.data))
       .catch((error) => console.log(error));
   }, []);

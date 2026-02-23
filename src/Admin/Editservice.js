@@ -17,14 +17,14 @@ function Editservice() {
   const [imagePreview, setImagePreview] = useState("");
   useEffect(() => {
     axios
-      .get("http://localhost:5000/getServices")
+      .get("https://go-services-ten.vercel.app/getServices")
       .then((response) => setServices(response.data))
       .catch((error) => console.log(error));
   }, []);
 
   const getdata = () => {
     axios
-      .get("http://localhost:5000/getServices")
+      .get("https://go-services-ten.vercel.app/getServices")
       .then((response) => setServices(response.data))
       .catch((error) => console.log(error));
   };
@@ -36,7 +36,7 @@ function Editservice() {
     );
     if (confirmDelete) {
       try {
-        await axios.delete(`http://localhost:5000/delete/Workeredit/${id}`);
+        await axios.delete(`https://go-services-ten.vercel.app/delete/Workeredit/${id}`);
         setServices(services.filter((service) => service._id !== id));
       } catch (error) {
         console.log("Error deleting service:", error);
@@ -59,7 +59,7 @@ function Editservice() {
       formData.append("image", image); // Assuming image is already a File object
 
       await fetch(
-        `http://localhost:5000/api/notes/updateService/${selectedService._id}`,
+        `https://go-services-ten.vercel.app/api/notes/updateService/${selectedService._id}`,
         {
           method: "PUT", // Change the method to PUT
           headers: {

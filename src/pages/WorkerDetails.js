@@ -9,7 +9,7 @@ function WorkerDetials({ documentId }) {
   useEffect(() => {
     if (id) {
       axios
-        .get(`http://localhost:5000/getWorkers/${id}`) // Replace with your backend endpoint to fetch worker details by ID
+        .get(`https://go-services-ten.vercel.app/getWorkers/${id}`) // Replace with your backend endpoint to fetch worker details by ID
         .then((response) => setWorker(response?.data))
         .catch((error) => console.log(error));
     }
@@ -22,7 +22,7 @@ function WorkerDetials({ documentId }) {
     console.log({ workerId: _workerId, userId });
     const data = { workerId: _workerId, userId };
     axios
-      .post("http://localhost:5000/add-to-cart", data)
+      .post("https://go-services-ten.vercel.app/add-to-cart", data)
       .then((res) => {
         console.log(res.data, "27");
         if (res.data.code === 200) {

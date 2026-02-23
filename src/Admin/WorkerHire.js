@@ -9,7 +9,7 @@ function WorkerHire() {
   const [application, setapplication] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:5000/gethireapplication")
+      .get("https://go-services-ten.vercel.app/gethireapplication")
       .then((response) => setapplication(response.data))
       .catch((error) => console.log(error));
   }, []);
@@ -21,7 +21,7 @@ function WorkerHire() {
     );
     if (confirmDelete) {
       axios
-        .delete(`http://localhost:5000/delete/applicationworker/${id}`)
+        .delete(`https://go-services-ten.vercel.app/delete/applicationworker/${id}`)
         .then((response) => {
           window.location.reload();
         })

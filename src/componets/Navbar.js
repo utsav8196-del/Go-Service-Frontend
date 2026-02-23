@@ -24,7 +24,7 @@ function Navbar() {
     if (!userId) return;
 
     axios
-      .post("http://localhost:5000/getcart", { userId })
+      .post("https://go-services-ten.vercel.app/getcart", { userId })
       .then((res) => {
         const user = res.data?.data || {};
         const cartItems = user.cart || [];

@@ -8,14 +8,14 @@ function Service() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/getServices")
+      .get("https://go-services-ten.vercel.app/getServices")
       .then((response) => setServices(response.data))
       .catch((error) => console.log(error));
   }, []);
 
   const handleClick = (serviceId) => {
     axios
-      .get(`http://localhost:5000/getServiceById/${serviceId}`)
+      .get(`https://go-services-ten.vercel.app/getServiceById/${serviceId}`)
       .then((response) => {
         console.log("Service details:", response.data);
       })
@@ -143,7 +143,7 @@ export default Service;
 
 //   useEffect(() => {
 //     axios
-//       .get("http://localhost:5000/getServices")
+//       .get("https://go-services-ten.vercel.app/getServices")
 //       .then((response) => {
 //         console.log("SERVICES DATA:", response.data);
 //         setServices(response.data);
@@ -232,7 +232,7 @@ export default Service;
 //                     className="card-img-top"
 //                     src={
 //                       service.image
-//                         ? `http://localhost:5000/${service.image}`
+//                         ? `https://go-services-ten.vercel.app/${service.image}`
 //                         : "https://via.placeholder.com/400x200?text=No+Image"
 //                     }
 //                     alt={service.category || "Service Image"}

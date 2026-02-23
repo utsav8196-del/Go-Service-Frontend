@@ -12,21 +12,21 @@ function Admin() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/getUser")
+      .get("https://go-services-ten.vercel.app/getUser")
       .then((response) => setUsers(response.data))
       .catch((error) => console.log(error));
   }, []);
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/getServices")
+      .get("https://go-services-ten.vercel.app/getServices")
       .then((response) => setServices(response.data))
       .catch((error) => console.log(error));
   }, []);
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/getWorkers")
+      .get("https://go-services-ten.vercel.app/getWorkers")
       .then((response) => setWorkers(response.data))
       .catch((error) => console.log(error));
   }, []);
@@ -38,7 +38,7 @@ function Admin() {
     );
     if (confirmDelete) {
       axios
-        .delete(`http://localhost:5000/delete/User/${id}`)
+        .delete(`https://go-services-ten.vercel.app/delete/User/${id}`)
         .then((response) => {
           window.location.reload();
         })

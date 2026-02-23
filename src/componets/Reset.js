@@ -7,7 +7,7 @@ function Reset() {
   const handlesubmit = (e) => {
     e.preventDefault();
     const { email } = state;
-    fetch("http://localhost:5000/forgot-password", {
+    fetch("https://go-services-ten.vercel.app/forgot-password", {
       method: "POST",
       crossDomain: true,
       headers: {

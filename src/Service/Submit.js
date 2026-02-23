@@ -128,7 +128,7 @@ function Submit() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.post("http://localhost:5000/getcart", {
+        const response = await axios.post("https://go-services-ten.vercel.app/getcart", {
           userId: localStorage.getItem("userId"),
         });
         setData(response.data);

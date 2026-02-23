@@ -12,7 +12,7 @@ function WorkerRegister() {
     const handlesubmit = async (e) => {
         e.preventDefault();
         const { name, email, password, service } = credential;
-        const response = await fetch("http://localhost:5000/api/auth/workerregister", {
+        const response = await fetch("https://go-services-ten.vercel.app/api/auth/workerregister", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

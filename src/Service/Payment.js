@@ -7,7 +7,7 @@ function Payment() {
 
   useEffect(() => {
     axios
-      .post("http://localhost:5000/getcart", {
+      .post("https://go-services-ten.vercel.app/getcart", {
         userId: localStorage.getItem("userId"),
       }) // Replace with your backend endpoint to fetch worker details by ID
       .then((response) => {
@@ -19,7 +19,7 @@ function Payment() {
   }, []);
 
   const redirectToPayment = () => {
-    window.location.href = `http://localhost:5000/pay?totalPrice=${totalPrice}`;
+    window.location.href = `https://go-services-ten.vercel.app/pay?totalPrice=${totalPrice}`;
   };
 
   // eslint-disable-next-line no-unused-vars
@@ -33,7 +33,7 @@ function Payment() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.post("http://localhost:5000/getcart", {
+        const response = await axios.post("https://go-services-ten.vercel.app/getcart", {
           userId: localStorage.getItem("userId"),
         });
         setData1(response.data.data.cart);
