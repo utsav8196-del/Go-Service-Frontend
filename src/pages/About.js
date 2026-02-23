@@ -1,15 +1,68 @@
-import  { useEffect } from "react";
+// import  { useEffect } from "react";
+// import { Link, useNavigate } from "react-router-dom";
+
+// function About(props) {
+//   const navigate = useNavigate();
+//   useEffect(() => {
+//     if (localStorage.getItem("token")) {
+//       navigate("/About");
+//     } else {
+//       navigate("/");
+//     }
+//   }, [navigate]);
+//   return (
+//     <>
+//       <div
+//         className="container-fluid page-header py-5 mb-5 wow fadeIn"
+//         data-wow-delay="0.1s"
+//       >
+//         <div className="container text-center py-5">
+//           <h1 className="display-4 text-white animated slideInDown mb-4">
+//             About Us
+//           </h1>
+//           <nav aria-label="breadcrumb animated slideInDown">
+//             <ol className="breadcrumb justify-content-center mb-0">
+//               <li className="breadcrumb-item">
+//                 <Link className="text-white" to="/">
+//                   Home
+//                 </Link>
+//               </li>
+//               <li
+//                 className="breadcrumb-item text-primary active"
+//                 aria-current="page"
+//               >
+//                 About Us
+//               </li>
+//             </ol>
+//           </nav>
+//         </div>
+//       </div>
+
+//       <div className="col-lg-8 m-4 wow fadeInUp" data-wow-delay="0.1s">
+//         <div className="border-start border-5 border-primary ps-4">
+//           <h6 className="text-body text-uppercase mb-2">Our Gallery</h6>
+//           <h1 className="display-6 mb-0">Happy Client</h1>
+//         </div>
+//       </div>
+
+//       <section id="gallery" className="gallery">
+//         <div className="container-fluid">
+//           <div className="row gy-2 justify-content-center">
+import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-function About(props) {
+function About() {
   const navigate = useNavigate();
+
   useEffect(() => {
-    if (localStorage.getItem("token")) {
-      navigate("/About");
-    } else {
+    const token = localStorage.getItem("token");
+
+    // If user is NOT logged in → redirect to Home
+    if (!token) {
       navigate("/");
     }
   }, [navigate]);
+
   return (
     <>
       <div

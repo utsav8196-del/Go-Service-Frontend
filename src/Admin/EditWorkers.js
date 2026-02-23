@@ -2,13 +2,12 @@ import { useEffect, useState } from "react";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import Footer from "./Footer";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
 
 function EditWorkers() {
   const [workers, setWorkers] = useState([]);
-
   const [selectedWorker, setSelectedWorker] = useState({
     image: null,
     workername: "",
@@ -18,7 +17,7 @@ function EditWorkers() {
   });
 
   const [imagePreview, setImagePreview] = useState("");
-
+  const navigate = useNavigate();
   useEffect(() => {
     axios
       .get("https://go-services-ten.vercel.app/getWorkers")
@@ -88,7 +87,7 @@ function EditWorkers() {
           body: formData, // Pass the formData object as the body
         }
       );
-      // navigate("/EditWorkers");
+      navigate("/EditWorkers");
     } catch (error) {
       console.log("Error updating service:", error);
     }
